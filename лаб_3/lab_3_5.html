@@ -1,0 +1,19 @@
+<HTML>
+    <HEAD>
+    <title>Обработка значений из формы</title>
+    <script>
+        function scr(obj){
+            var a = obj.a1.value;
+            obj.a1.value = obj.b1.value;
+            obj.b1.value = a;
+        }
+    </script>
+    </HEAD>
+    <BODY>
+    <P>Введите переменные</P>
+    <FORM name="form1">
+    a1: <input type="text" size=5 name="a1">
+    b1: <input type="text" size=5 name="b1" onblur="scr(form1)">
+    </FORM>
+    </BODY>
+    </HTML>

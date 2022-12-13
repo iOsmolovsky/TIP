@@ -1,0 +1,74 @@
+.employee_container {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.questionnaire {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(212, 212, 212);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 4px 40px 4px 10px;
+  margin: 5px 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.vacation_btn {
+  width: 60px;
+  height: 30px;
+  background-color: rgb(218, 196, 5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 1px 2px;
+}
+
+.vacation_btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.vacation_btn:active {
+  background-color: rgb(170, 153, 3);
+  opacity: 1;
+  box-shadow: none;
+}
+
+.submit_btn {
+  width: 60px;
+  height: 30px;
+  background-color: rgb(12, 194, 12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 1px 2px;
+}
+
+.submit_btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.submit_btn:active {
+  background-color: rgb(4, 160, 4);
+  opacity: 1;
+  box-shadow: none;
+}
+
+.result_container {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.result_container > div > * {
+  margin-top: 4px;
+}

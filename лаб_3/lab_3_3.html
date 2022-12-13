@@ -1,0 +1,23 @@
+<HTML>
+    <HEAD>
+    <title>Обработка значений из формы</title>
+    <script>
+        function scr(obj){
+            obj.res.value = 1/2 * Math.abs((obj.a2.value - obj.a1.value)*(obj.b3.value - obj.b1.value) - (obj.a3.value - obj.a1.value) * (obj.b2.value - obj.b1.value))
+        }
+    </script>
+    </HEAD>
+    <BODY>
+    <P>Запишите координаты</P>
+    <FORM name="form1">
+    a1: <input type="text" size=5 name="a1">
+    b1: <input type="text" size=5 name="b1"><hr>
+    a2: <input type="text" size=5 name="a2">
+    b2: <input type="text" size=5 name="b2"><hr>
+    a3: <input type="text" size=5 name="a3">
+    b3: <input type="text" size=5 name="b3"><hr>
+    Вычислить: <input type="text" name="res"
+    onfocus="scr(form1)" >
+    </FORM>
+    </BODY>
+    </HTML>

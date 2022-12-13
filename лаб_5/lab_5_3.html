@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Горизонтальное меню</title>
+        <script>
+            function chan(obj){
+                var r1= obj;
+                var image = document.images[r1];
+                let blocky = document.getElementById(r1);
+                blocky.onmouseover = function(){
+                    image.style.display = "inline-block";
+                }
+                blocky.onmouseout = function(){
+                    image.style.display= "none"
+                }
+
+            }
+        </script>
+        <style>
+            body{
+                margin:5 auto; text-align: center; padding: 20px;
+            }
+            div{
+                display: inline-block;
+                /*border: 2px solid black;*/
+                margin: 5px;
+                width: 100px;
+            }
+            img{
+                width: 10%;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var r1=0;
+            var r2=1;
+            var r3=2;
+            var r4=3;
+        </script>
+        <div><img src="arrow.png"></div>
+        <div><img src="arrow.png"></div>
+        <div><img src="arrow.png"></div>
+        <div><img src="arrow.png"></div><br>
+        <div id="0" onmouseover="chan(r1)">
+            <a href="lab_5_4.html">Первое задание</a>
+        </div>
+        <div id="1" onmouseover="chan(r2)">
+            <a href="lab_5_1.html">Второе задание</a>
+        </div>
+        <div id="2" onmouseover="chan(r3)">
+            <a href="lab_5_2.html">Третье задание</a>
+        </div>
+        <div id="3" onmouseover="chan(r4)">
+            <a href="lab_5_3.html">Четвертое задание</a>
+        </div>
+        <span></span>
+    </body>
+</html>

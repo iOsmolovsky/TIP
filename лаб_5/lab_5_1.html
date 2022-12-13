@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Перестановка изображений</title>
+        <script>
+            function chan(obj){
+                var r1= obj;
+                var r2= 2;
+                var z = document.images[r1].src;
+                document.images[r1].src=document.images[r2].src;
+                document.images[r2].src=z;
+                
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <script>
+                var r1=0;
+                var r2=1;
+                var r3=2;
+            </script>
+            <h1>Галерея рисунков</h1>
+            <img src="p1.png" width="300" name="pic1" onclick="chan(r1)"><br>
+            <img src="p2.png" width="300" name="pic2" onclick="chan(r2)"><br>
+            <img src="p3.png" width="300" name="pic3" onclick="chan(r3)"><br>
+        </center>
+    </body>
+</html>

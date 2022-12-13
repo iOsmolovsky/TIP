@@ -1,0 +1,92 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>Опрежедение количества выходных и рабочих дней между двумя датами</h1>
+    <form name="dateForm">
+        Первая дата: <input type="date" name="date1">
+        Вторая дата: <input type="date" name="date2">
+    </form>
+    <button name="date">Рассчитать</button>
+    <h1>Опрежедение стажа сотрудника</h1>
+    <form name="workForm">
+        <input type="text" name="name1">
+        <input type="date" name="date1" id="0">
+        <output name="exp1"></output><br>
+        <input type="text" name="name2">
+        <input type="date" name="date2" id="1">
+        <output name="exp2"></output><br>
+        <input type="text" name="name3">
+        <input type="date" name="date3" id="2">
+        <output name="exp3"></output><br>
+        <input type="text" name="name4">
+        <input type="date" name="date4" id="3">
+        <output name="exp4"></output><br>
+        <input type="text" name="name5">
+        <input type="date" name="date5" id="4">
+        <output name="exp5"></output><br>
+        <input type="text" name="name6">
+        <input type="date" name="date6" id="5">
+        <output name="exp6"></output><br>
+    </form>
+    <button name="work">Определить</button>
+
+    <div>
+        <canvas id="myChart" width="600px" height="600px"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js"></script>
+    <script src="lab_8.js"></script>
+    <script>
+        document.querySelector('button[name="work"]').onclick = function () {
+            var expDate;
+            var currentDate = new Date()
+            let arrOfExp = [];
+            var a = 0, b = 0, c = 0;
+            for (var i = 0; i <= 5; i++) {
+                expDate = new Date(document.getElementById(i).value);
+                arrOfExp[i] = getYearDiff(currentDate, expDate);
+                if (arrOfExp[i] <= 1) {
+                    document.querySelectorAll('output')[i].value = "молодой";
+                    a++;
+                }
+                if (arrOfExp[i] > 1 && arrOfExp[i] <= 5) {
+                    document.querySelectorAll('output')[i].value = "опытный";
+                    b++;
+                }
+                if (arrOfExp[i] > 5) {
+                    document.querySelectorAll('output')[i].value = "ветеринар";
+                    c++;
+                }
+            }
+            arrOfNam = [a, b, c];
+
+            let ctx = document.querySelector('#myChart').getContext('2d');
+            let myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['молодой', 'опытный', 'ветиран'],
+                    datasets: [{
+                        label: 'рабочие',
+                        data: [a, b, c],
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)'
+                        ],
+                        hoverOffset: 4
+                    }]
+                }
+            });
+        }
+
+        function getYearDiff(date1, date2) {
+            return Math.abs(date2.getFullYear() - date1.getFullYear());
+        }
+    </script>
+</body>
+
+</html>

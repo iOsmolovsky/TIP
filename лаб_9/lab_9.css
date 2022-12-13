@@ -1,0 +1,57 @@
+.top{
+    display: inline-block;
+    margin: 5px;
+    width: 150px;
+}
+.name{
+    background-color: darkgreen;
+    font-size: 20px;
+    color: bisque;
+    border: 2px solid rgb(23, 55, 24);
+}
+.arrow{
+    width: 20px;
+    height: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: none;
+}
+
+.menu{
+    background-color: darkolivegreen;
+    text-align: center;
+}
+
+body{
+    background-color: antiquewhite;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainImg{
+    width: 500px;
+    height: 700px;
+    position: absolute;
+}
+
+.slider-img{
+    width: 250px;
+    height: 400px;
+}
+
+.slider{
+    width: 250px;
+    height: 400px;
+    border: 2px solid black;
+    margin: 30px auto;
+    overflow: hidden;
+}
+.slider-line{
+    height: 400px;
+    width: 1250px;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}

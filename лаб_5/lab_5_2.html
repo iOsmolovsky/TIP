@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Увеличение изображений</title>
+        <script>
+            function chan(obj){
+                var r1= obj;
+                var image = document.images[r1];
+                var maxWidth = "25%";
+                var minWidth = "20%";
+                image.onmouseover = function(){
+                    this.style.width = maxWidth;
+                };
+                image.onmouseout = function(){
+                    this.style.width = minWidth;
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <CENTER>
+            <script>
+                var r1=0;
+                var r2=1;
+                var r3=2;
+            </script>
+            <h1>Галерея рисунков</h1>
+            <img src="p1.png" width="300" name="pic1" onmouseover="chan(r1)"><br>
+            <a href="https://www.youtube.com/watch?v=eHCMa29LAMU"><img src="p2.png" width="300" name="pic2" onmouseover="chan(r2)"></a><br>
+            <img src="p3.png" width="300" name="pic3" onmouseover="chan(r3)"><br>
+        </CENTER>
+    </body>
+</html>

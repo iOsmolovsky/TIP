@@ -1,0 +1,25 @@
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+table{
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 20px;
+    border: 1px solid black;
+}
+.submit{
+    min-width: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    display: block;
+}
+.forms{
+    display: flex;
+    flex-wrap: wrap;
+}
+.forms form{
+    margin-right: 20px;
+}

@@ -1,0 +1,31 @@
+<HTML>
+    <HEAD>
+    <title>Обработка значений из формы</title>
+    <script>
+        function scr(obj){
+            obj.res.value = (obj.a1.value**2 + obj.b1.value**2)**(1/2)
+        }
+    </script>
+    </HEAD>
+    <BODY>
+    <P>Запишите координаты</P>
+    <FORM name="form1">
+    a1: <select name="a1" size="1">
+        <option value="1" selected="selected">1</option>
+        <option value="2" selected="selected">2</option>
+        <option value="3" selected="selected">3</option>
+        <option value="4" selected="selected">4</option>
+        <option value="5" selected="selected">5</option>
+        </select>
+    b1: <select name="b1" size="1">
+        <option value="1" selected="selected">1</option>
+        <option value="2" selected="selected">2</option>
+        <option value="3" selected="selected">3</option>
+        <option value="4" selected="selected">4</option>
+        <option value="5" selected="selected">5</option>
+        </select> <hr>
+    Вычислить: <input type="text" name="res"
+    onfocus="scr(form1)" >
+    </FORM>
+    </BODY>
+    </HTML>
